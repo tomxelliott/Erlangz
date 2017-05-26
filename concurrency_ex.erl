@@ -18,7 +18,6 @@ loop() ->
 %3> Pid ! something.
 %something
 %I got the message: something
-
 %4> Pid ! [something,else].
 %[something,else]
 %I got the message: [something,else]

@@ -48,7 +48,6 @@ permutations([X|Xs]) ->
         permutations(Xs)
     ).
 
-
 -spec permute(T, [T]) -> 
 	[[T]].
 permute(X, []) -> 

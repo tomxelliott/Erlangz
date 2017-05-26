@@ -1,2 +1,1 @@
-# erlangfuturelearn
-Erlang code from Future Learn course I am taking...
+# ERLANGZZ

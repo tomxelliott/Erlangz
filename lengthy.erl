@@ -11,6 +11,7 @@ lengthy([]) ->
 lengthy([_|T]) ->
     1 + lengthy(T).
     
-factorial(0) -> 1;
+factorial(0) -> 
+	1;
 factorial(N) ->
 	N * factorial(N - 1).

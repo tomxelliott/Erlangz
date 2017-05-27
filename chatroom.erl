@@ -10,8 +10,7 @@ add_user(Pid, MyName) ->
 loop(Chatters) ->
 	receive
 		{From, broadcast, SenderName, Message} ->
-			[ Member ! {accept, SenderName, Message} || Member <- Chatters,
-														Member =/= From ],
+			[ Member ! {accept, SenderName, Message} || Member <- Chatters, Member =/= From ],
 			loop(Chatters);
 
 		{From, add, MyName} ->

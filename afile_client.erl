@@ -12,5 +12,5 @@ get_file(Server, File) ->
 	Server ! {self(), {get_file, File}},
 	receive
 			{Server, Content} ->
-				Content
+				Content 
 	end.

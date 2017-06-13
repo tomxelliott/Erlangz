@@ -16,6 +16,10 @@ fibo(List, Iter) ->
   Sum = aggregate_last_two(List),
   fibo(List ++ [Sum], Iter - 1).
 
+fib(0) -> 0;
+fib(1) -> 1;
+fib(N) when N > 0 -> fib(N - 1) + fib(N - 2).
+
 cut_a(Acc, _, 0) -> Acc;
 cut_a(0, 0, Max) -> cut_a(1, 1, Max);
 cut_a(Acc, Iter, Max) -> cut_a(Iter + Acc, Iter + 1, Max - 1).

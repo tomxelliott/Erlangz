@@ -1,7 +1,22 @@
 -module(recursion_examples).
--export([fibo/1, pieces_a/1, pieces_b/1, run_tests/0]).
+-export([fibo/1, pieces_a/1, pieces_b/1, listy/1, summer/1, list_summer/1, run_tests/0]).
 
 % Public
+
+listy([]) ->
+	  [];
+listy([X|Xs]) ->
+	      io:fwrite("~p, ", [X]), listy(Xs).
+
+summer(0) ->
+	  0;
+summer(X) ->
+	  X + summer(X-1).
+
+list_summer([]) ->
+		0;
+list_summer([X|Xs]) ->
+	      X + list_summer(Xs).
 
 fibo(N) -> fibo([0, 1], N).
 
